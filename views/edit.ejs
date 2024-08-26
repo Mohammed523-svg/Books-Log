@@ -1,0 +1,27 @@
+<!-- Header -->
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" href="/styles/addbook.css">
+
+<div class="new_book">
+    <div class="book">
+        <form class="book_add" action="/new" method="post">
+            <div class="book_img">
+                <img src="https://covers.openlibrary.org/b/id/<%= content[0].cover_id %>-M.jpg" alt="">
+            </div>
+            <div class="book_info">
+                <h3>Title</h3>
+                <input type="text" class="title" value="<%= content[0].name %>" autocomplete="off">
+                <h3>Author</h3>
+                <input type="text" class="author" value="<%= content[0].author_name %>" autocomplete="off">
+                <h3>Review</h3>
+                <textarea class="review" id="reviewText" rows="1" cols="50"><%= content[0].book_info %></textarea>
+            </div>
+            <div class="button">
+                <button>Edit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<%- include("partials/footer.ejs") %>

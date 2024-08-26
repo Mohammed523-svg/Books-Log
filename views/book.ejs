@@ -1,0 +1,31 @@
+<!-- Header -->
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" href="/styles/book.css">
+
+   <div class="box">
+           <div class="books">
+            <% if (locals.content) { %>
+               <div class="book">
+                   <div class="book_img">
+                       <img src="https://covers.openlibrary.org/b/id/<%= content.cover_id %>-M.jpg" alt="">
+                   </div>
+                   <div class="book_info">
+                       <h1 class="book_title"><%= content.name %></h1>
+                       <h3 class="book_author"><%= content.author_name %></h3>
+                       <p class="book_review"><%= content.book_info %></p>
+                       <form class="buttons" action="/edit" method="post">
+                        <button id="edit" class="edit" name="newBook" value="<%= content.id %>"><img class="icon"
+                            src="/assets/icons/pencil.svg" alt="pencil image"></button>
+                            <a class="delete" id="delete" href="/books/delete/<%= content.id %>">
+                                <img class="icon"
+                            src="/assets/icons/delete.svg" alt="delete image">
+                            </a>  
+                        </form>
+                   </div>
+               </div>
+            <% } %>
+           </div>
+   </div>
+
+<!-- Footer -->    
+<%- include("partials/footer.ejs") %>

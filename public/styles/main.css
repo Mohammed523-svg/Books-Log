@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    
+}
+
+html {
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+}
+
+/* .main_box{
+    height: 100vh;
+} */
+
+.box{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "top"
+    "bottom";
+    /* align-items: center; */
+    background-color: #fefae0;
+    overflow: hidden;
+}
+
+.sec_top{
+    grid-area: top;
+}
+
+.sec_search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.sec_bottom{
+    grid-area: bottom;
+}
+
+.input_books{
+    padding: 3.6rem 3.6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.search_books{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 6px 20px;
+    background-color: #d4a373;
+    margin-bottom: 10px;
+}
+
+.search_books > input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    color: #faedcd;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #faedcd;
+}
+
+.search_books button img {
+    width: 25px;
+}
+
+.search_books > button {
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: none;
+    transition: none;
+    padding: 0;
+}
+
+.books{
+    padding: 1rem 2rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: 100%;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.book{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 1rem;
+}
+
+.book_img{
+    height: 300px;
+    width: 200px;
+    margin: 0.4rem;
+}
+
+.book_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.book_info{
+    display: flex;
+    flex-direction: column;
+    font-family: "Oswald", sans-serif;
+    padding: 1.4rem 0.6rem;
+    gap: 0.4rem;
+}
+
+.book_title{
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #d4a373;
+}
+
+.book_title:hover{
+    color: #fce8b5;
+    font-size: 2.1rem;
+    padding: 0.2rem 0;
+}
+
+.book_author{
+    margin: 0.25 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #d4a373;
+}
+
+.book_review{
+    margin-bottom: 0.35;
+    font-weight: 100;
+    font-size: 1.2rem;
+    color: #d4a373;
+}
+
+button.edit{
+    margin-left: 0px;
+    margin-right: 20px;
+    border: none;
+    background: none;
+}
+  
+.icon{
+    height: 30px;
+}
+
+.book_search{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: 100%;
+    justify-items: center;
+    gap: 5px;
+    background-color: #d4a373;
+    padding: 10px;
+    width: 580px;
+    margin: 0 3.6rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.book_search > button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.search_input{
+    display: grid;
+    grid-template-columns: 50px auto;
+    gap: 10px;
+    width: 100%;
+    place-self: center;
+    padding: 4px 20px;
+}
+
+.search_input:hover{
+    background-color: #f0b982;
+}
+
+.search_img{
+    height: 50px;
+    width: 30px;
+    margin: 0.2rem;
+}
+
+.search_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search_info{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    place-self: center;
+    width: 100%;
+    text-align: left;
+}
+
+.search_title{
+    font-weight: 500;
+    font-size: 1rem;
+    color: #faedcd;
+}
+
+.search_author{
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #faedcd;
+}
+
+.truncate-text {
+    max-width: 100ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+
+@media screen and (max-width: 768px){
+    .input_books{
+        padding: 3.6rem 3.6rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .search_books{
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        border-radius: 60px;
+        padding: 6px 20px;
+        background-color: #d4a373;
+        margin-bottom: 10px;
+    }
+    
+    .search_books > input{
+        background: transparent;
+        flex: 1;
+        border: 0;
+        outline: none;
+        padding: 10px 10px;
+        font-size: 18px;
+        color: #faedcd;
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+    }
+    
+    ::placeholder {
+        color: #faedcd;
+    }
+    
+    .search_books button img {
+        width: 25px;
+    }
+    
+    .search_books > button {
+        border: 0;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background: none;
+        transition: none;
+        padding: 0;
+    }
+
+    .book_img{
+        height: 260px;
+        width: 180px;
+    }
+    
+    .book_title{
+        margin-bottom: 0.25rem;
+        font-size: 1.6rem;
+    }
+    
+    .book_title:hover{
+        font-size: 1.8rem;
+    }
+    
+    .book_author{
+        margin: 0.25 0;
+        font-size: 1rem;
+    }
+    
+    .book_review{
+        margin-bottom: 0.35;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .input_books{
+        padding: 2.4rem 1rem 0;
+    }
+    
+    .search_books{
+        max-width: 360px;
+        border-radius: 40px;
+        padding: 3px 10px;
+        margin-bottom: 5px;
+    }
+    
+    .search_books > input{
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    
+    .search_books button img {
+        width: 20px;
+    }
+    
+    .search_books > button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .books{
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+        gap: 0.5rem;
+    }
+    
+    .book{
+        grid-template-columns: 100px 1fr;
+        gap: 10px;
+        padding: 0.6rem;
+    }
+    
+    .book_img{
+        height: 140px;
+        width: 80px;
+        margin: 0.2rem;
+    }
+    
+    .book_img > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+    
+    .book_info{
+        display: flex;
+        flex-direction: column;
+        font-family: "Oswald", sans-serif;
+        padding: 1rem 0.6rem;
+        gap: 0.2rem;
+    }
+    
+    .book_title{
+        margin-bottom: 0.3rem;
+        font-size: 1.2rem;
+    }
+    
+    .book_title:hover{
+        font-size: 1.3rem;
+        padding: 0.1rem 0;
+    }
+    
+    .book_author{
+        margin: 0.2 0;
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #d4a373;
+    }
+    
+    .book_review{
+        margin-bottom: 0.35;
+        font-size: 0.6rem;
+    }
+    
+    .book_search{
+        gap: 5px;
+        padding: 5px;
+        width: 340px;
+        margin: 0 1.2rem;
+        border-radius: 0 0 5px 5px;
+    }
+    
+    .search_input{
+        display: grid;
+        grid-template-columns: 30px auto;
+        gap: 5px;
+        padding: 2px 5px;
+    }
+    
+    .search_img{
+        height: 30px;
+        width: 20px;
+        margin: 0.15rem;
+    }
+    
+    .search_title{
+        font-size: 0.65rem;
+    }
+    
+    .search_author{
+        font-size: 0.45rem;
+    }
+}

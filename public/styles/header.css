@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    
+}
+
+html {
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+}
+
+nav{
+    background-color: #d4a373;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    top: 0;
+    height: 70px;
+    padding: 0 2.5rem;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo img{
+    height: 8rem;
+}
+
+.admin{
+   margin: 0 2.4rem;
+}
+
+.admin > h3{
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #fefae0;
+}
+
+.admin > h3:hover{
+    color: #faedcd;
+    font-size: 1.5rem;
+}
+
+/* popup authorisation  */
+
+.popup_auth{
+    position: absolute;
+    top: 50%;
+    left: 50%;transform: translate(-50%, -50%);
+    visibility: hidden;
+    z-index: 10;
+}
+
+.open_auth{
+    visibility: visible;
+}
+
+.authorise{
+    padding: 1.4rem;
+    background-color: #d4a373;
+    height: 260px;
+    width: 450px;
+    border-radius: 40px;
+    border: 3px solid #bb9166;
+}
+
+.admin_auth{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_auth > input{
+    margin: 1rem 0;
+    border: 1px solid #cdcab5;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 0 0.6rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: #fefae0;
+    color: #bb9166;
+}
+
+.admin_auth > button{
+    font: inherit;
+    padding: 0 2.4rem 0.15rem;
+    margin: 1rem 0;
+    background: #fefae0;
+    border: 0.15em solid #cfccb7;
+    border-radius: 100vw;
+    cursor: pointer;
+    transition: background-color 250ms;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #d4a373;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.admin_auth > button:hover{
+    background: #faedcd;
+    padding: 0 2.5rem 0.16rem;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 425px){
+    nav{
+        height: 50px;
+        padding: 0 1rem;
+    }
+    
+    .logo img{
+        height: 4.5rem;
+    }
+    
+    .admin{
+       margin: 0 1.8rem 0.4rem;
+    }
+    
+    .admin > h3{
+        font-size: 1rem;
+    }
+    
+    .admin > h3:hover{
+        font-size: 1.1rem;
+    }
+    
+    /* popup authorisation  */
+    
+    .authorise{
+        padding: 1rem;
+        height: 160px;
+        width: 260px;
+        border-radius: 10px;
+        border: 2px solid #bb9166;
+    }
+    
+    .admin_auth > input{
+        margin: 1rem 0;
+        border-radius: 10px;
+        height: 30px;
+        width: 220px;
+    }
+    
+    .admin_auth > button{
+        font: inherit;
+        padding: 0 2.4rem 0.15rem;
+        margin: 1rem 0;
+        background: #fefae0;
+        border: 0.15em solid #cfccb7;
+        border-radius: 100vw;
+        cursor: pointer;
+        transition: background-color 250ms;
+        font-family: "Oswald", sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    
+    .admin_auth > button:hover{
+        background: #faedcd;
+        padding: 0 2.5rem 0.16rem;
+        font-size: 1.1rem;
+    }
+}

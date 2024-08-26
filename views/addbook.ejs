@@ -1,0 +1,32 @@
+<!-- Header -->
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" href="/styles/addbook.css">
+
+<div class="new_book">
+    <div class="book">
+        <% if (locals.authFailed) { %>
+            <h1><%= authFailed %></h1>
+        <% } else { %>
+            <form class="book_add" action="/new" method="post">
+                <div class="book_img">
+                    <img src="https://covers.openlibrary.org/b/id/<%= book[0].cover_id %>-M.jpg" alt="">
+                </div>
+                <div class="book_info">
+                    <input type="text" hidden value="<%= book[0].cover_id %>" name="cover_id">
+                    <h3>Title</h3>
+                    <input name="title" type="text" class="title" value="<%= book[0].name %>" autocomplete="off">
+                    <h3>Author</h3>
+                    <input name="author" type="text" class="author" value="<%= book[0].author_name %>" autocomplete="off">
+                    <h3>Review</h3>
+                    <textarea name="info" class="review" id="reviewText" rows="1" cols="50"><%= book[0].book_info %></textarea>
+                </div>
+                <div class="button">
+                    <button name="id" value="<%= book[0].id %>">Post</button>
+                </div>
+            </form>
+        <% } %>
+    </div>
+</div>
+
+<!-- Footer -->
+<%- include("partials/footer.ejs") %>

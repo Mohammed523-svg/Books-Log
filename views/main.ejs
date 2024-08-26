@@ -1,0 +1,58 @@
+<!-- Header -->
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" href="/styles/main.css">
+
+<div id="box" class="main_box">
+   <div class="box">
+       <div class="sec_top">
+           <div class="input_books">
+               <form class="search_books" action="/search" class="search_bar" method="POST" autocomplete="off">
+                <input type="text" placeholder="<%= placeholder %>" name="books" >
+                <button class="search" type="submit">
+                    <img src="/assets/icons/search.svg" alt="">
+                </button>
+               </form>
+           </div>
+           <% if (locals.search) { %>
+            <div class="sec_search">
+                <form method="post" class="book_search">
+                <% search.forEach(data => { %>
+                <button class="search_input" formaction="/bookInput" name="bookSearch" value="<%= data.cover_i %>">
+                   <div class="search_img">
+                     <img src="https://covers.openlibrary.org/b/id/<%= data.cover_i %>-S.jpg" alt="">
+                   </div>
+                   <div class="search_info">
+                     <h2 class="search_title"><%= data.title %></h2>
+                     <h3 class="search_author"><%= data.author_name[0] %></h3>
+                   </div>
+                </button>
+                <% }) %>
+            </form>
+            </div>
+           <% } %>
+       </div>
+       <div class="sec_bottom">
+           <div class="books">
+            <% if (locals.content) { %>
+            <% content.forEach(result => { %>
+               <div class="book">
+                   <div class="book_img">
+                       <img src="https://covers.openlibrary.org/b/id/<%= result.cover_id %>-M.jpg" alt="">
+                   </div>
+                   <div class="book_info">
+                    <a class="edit" href="/book/<%= result.id %>">
+                       <h1 class="book_title"><%= result.name %></h1>
+                    </a>
+                       <h3 class="book_author"><%= result.author_name %></h3>
+                       <p id="bookInfo" class="book_review"><%= result.book_info.substring(0, 600) %>...</p>
+                   </div>
+               </div>
+            <% }) %>
+            <% } %>
+           </div>
+       </div>
+   </div>
+</div>
+
+<!-- Footer -->    
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    
+}
+
+html {
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+}
+
+/* .main_box{
+    height: 100vh;
+} */
+
+.box{
+    padding: 2rem;
+    background-color: #fefae0;
+    overflow: hidden;
+}
+
+.books{
+    padding: 1rem 2rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: 100%;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.book{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 1rem;
+}
+
+.book_img{
+    height: 300px;
+    width: 200px;
+    margin: 0.4rem;
+}
+
+.book_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.book_info{
+    display: flex;
+    flex-direction: column;
+    font-family: "Oswald", sans-serif;
+    padding: 1.4rem 0.6rem;
+    gap: 0.6rem;
+}
+
+.book_title{
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: #d4a373;
+}
+
+.book_author{
+    margin: 0.25 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #d4a373;
+}
+
+.book_review{
+    margin-bottom: 0.6;
+    font-weight: 100;
+    font-size: 1.2rem;
+    color: #d4a373;
+}
+
+.buttons{
+    padding: 1rem 0;
+}
+
+button.edit{
+    margin-left: 0px;
+    margin-right: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+  
+.icon{
+    height: 30px;
+}
+
+@media screen and (max-width: 768px){
+    .box{
+        padding: 2rem 1rem;
+    }
+    
+    .books{
+        padding: 0.5rem 1rem;
+        margin-bottom: 4rem;
+    }
+    
+    .book{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        align-items: center;
+        gap: 30px;
+        padding: 1rem;
+    }
+    
+    .book_img{
+        height: 300px;
+        width: 200px;
+        margin: 0.4rem;
+    }
+    
+    .book_img > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    
+    .book_info{
+        display: flex;
+        flex-direction: column;
+        font-family: "Oswald", sans-serif;
+        padding: 1rem 0.6rem;
+        gap: 0.6rem;
+    }
+    
+    .book_title{
+        margin-bottom: 0.2rem;
+        font-size: 2rem;
+    }
+    
+    .book_author{
+        font-size: 1.2rem;
+    }
+    
+    .book_review{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .box{
+        padding: 1rem;
+    }
+    
+    .books{
+        padding: 0.2rem 0.45rem;
+        margin-bottom: 2rem;
+        gap: 0.5rem;
+    }
+    
+    .book{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        align-items: center;
+        gap: 20px;
+        padding: 1rem 0.4rem;
+    }
+    
+    .book_img{
+        height: 140px;
+        width: 80px;
+        margin: 0.2rem;
+    }
+    
+    .book_img > img{
+        border-radius: 4px;
+    }
+    
+    .book_info{
+        display: flex;
+        flex-direction: column;
+        font-family: "Oswald", sans-serif;
+        padding: 1rem 0.4rem;
+        gap: 0.4rem;
+    }
+    
+    .book_title{
+        margin-bottom: 0.35rem;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: #d4a373;
+    }
+    
+    .book_author{
+        margin: 0.25 0;
+        font-weight: 500;
+        font-size: 0.85rem;
+        color: #d4a373;
+    }
+    
+    .book_review{
+        margin-bottom: 0.6;
+        font-weight: 100;
+        font-size: 0.6rem;
+        color: #d4a373;
+    }
+      
+    .icon{
+        height: 20px;
+    }
+}
