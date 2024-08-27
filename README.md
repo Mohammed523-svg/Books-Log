@@ -42,13 +42,17 @@ This project is made in my process of learning Full stack Website Development, t
 </pre>
    
 8. Next come into app.js file and change the fill the password with your pgAdmin password,
+   <pre>
+    <code>
 
-*   const db = new pg.Client({
+   const db = new pg.Client({
    user: "postgres",
    host: "localhost",
    database: "Books-log",
    password: "your password",
    port: 5432,
   });
+ </code>
+</pre>
 4. Now run this command in the terminal "node index.js"
 5. Finally you can view the website on "Localhost:3000"
