@@ -45,14 +45,15 @@ This project is made in my process of learning Full stack Website Development, t
    <pre>
     <code>
 
-   const db = new pg.Client({
-   user: "postgres",
-   host: "localhost",
-   database: "Books-log",
-   password: "your password",
-   port: 5432,
-  });
+      const db = new pg.Client({
+      user: "postgres",
+      host: "localhost",
+      database: "Books-log",
+      password: "your password",
+      port: 5432,
+     });
  </code>
 </pre>
+
 4. Now run this command in the terminal "node index.js"
 5. Finally you can view the website on "Localhost:3000"
