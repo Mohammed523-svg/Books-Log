@@ -22,7 +22,8 @@ This project is made in my process of learning Full stack Website Development, t
 4. Open your pgAdmin.
 5. Create a new databse name Books-log.
 6. Run these following sql commands,
-   CREATE TABLE users(
+
+*   CREATE TABLE users(
       id SERIAL PRIMARY KEY,
       password VARCHAR(50)
    );
@@ -35,13 +36,15 @@ This project is made in my process of learning Full stack Website Development, t
       book_info VARCHAR(10000),
       user_id INTEGER REFERENCES users(id)
    );
-7. Next come into app.js file and change the fill the password with your pgAdmin password,
-   const db = new pg.Client({
+   
+8. Next come into app.js file and change the fill the password with your pgAdmin password,
+
+*   const db = new pg.Client({
    user: "postgres",
    host: "localhost",
    database: "Books-log",
    password: "your password",
    port: 5432,
- });
+  });
 4. Now run this command in the terminal "node index.js"
 5. Finally you can view the website on "Localhost:3000"
