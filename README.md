@@ -22,8 +22,10 @@ This project is made in my process of learning Full stack Website Development, t
 4. Open your pgAdmin.
 5. Create a new databse name Books-log.
 6. Run these following sql commands,
+<pre>
+    <code>
 
-*   CREATE TABLE users(
+   CREATE TABLE users(
       id SERIAL PRIMARY KEY,
       password VARCHAR(50)
    );
@@ -36,6 +38,8 @@ This project is made in my process of learning Full stack Website Development, t
       book_info VARCHAR(10000),
       user_id INTEGER REFERENCES users(id)
    );
+        </code>
+</pre>
    
 8. Next come into app.js file and change the fill the password with your pgAdmin password,
 
